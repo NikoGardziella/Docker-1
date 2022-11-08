@@ -1,0 +1,9 @@
+FROM python:3
+
+MAINTAINER niko <ngardzie@student.hive.fi>
+
+ADD python_script.py /
+
+RUN pip install pystrich
+
+CMD [ "python", "./python_script.py" ]

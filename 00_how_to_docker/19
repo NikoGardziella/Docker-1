@@ -1,0 +1,10 @@
+#make sure that the node is not part of existing swarm 
+docker swarm leave --force
+
+#create new swarm to hive Macs
+docker swarm init
+
+#use the command given to join the swarm in linux terminal
+docker swarm join --token SWMTKN-1-0mgtx6oyzj71j794cq1j7pguiu8xt7dszpud7p1lvbsvrc8tqn-4vuc1ev494akv3clfn01zck4e 192.168.65.3:2377
+
+# docker default port 2377 doesn't work on schools Mac so the swarm is created on VM and joined with MAC.
